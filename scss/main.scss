@@ -1,95 +1,79 @@
 @import "reset";
 @import "fonts";
 
-
-
+html,
+body {
+  height: 100%;
+  font-family: "Pangram-ExtraLight";
+  font-size: 16px;
+  line-height: 27px;
+}
 
 .container {
-    margin: 0 auto;
-    max-width: 1254px;
-    border: 1px solid black;
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1250px;
 }
 
-.advantage {
-    padding-top: 100px;
-    padding: 0px 10px;
-    &::after {
-        content: "";
-        position: fixed;
-        top: 0;
-        right: 0;
-        min-width: 55%;
-        height: 100vh;
-        background-color: #F6F6F6;
-        z-index: -1;
-        height: 100vh;
+.advantages {
+  position: relative;
+  padding-top: 100px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background-color: #F6F6F6;
+    z-index: -1;
+  }
+
+  &__title {
+    max-width: 760px;
+    font-size: 3rem;
+    line-height: 4.05rem;
+
+    &--yellow {
+      color: #F7CE03;
+      font-family: "Pangram-Regular";
     }
-}
+  }
 
-
-
-.advantage-machines {
+  &-item {
     position: relative;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: auto;
     grid-gap: 30px;
-}
+    align-items: center;
 
-.advantage-machines__text {
-    grid-column: 6 span;
-
-    @media (max-width: 500px) {
-        grid-column: 12 span;
-    }
-}
-
-.advantage-machines__images {
-    grid-column: 6 span;
-    @media (max-width: 500px) {
-        grid-column: 12 span;
-    }
-}
-
-
-.title-wattsan {
-    position: absolute;
-    grid-column: 12 span;
-    max-width: 671px;
-    font-family: "Pangram-ExtraLight";
-    font-size: 46px;
-
-    span {
-        color: #F7CE03;
-        font-family: "Pangram-Regular";
-    }
-}
-
-.advantage-machines__text {
-    max-width: 421px;
-    line-height: 28px;
-
-
-    .advantage-machines__title {
-        font-size: 36px;
-        margin-bottom: 31px;
+    &__text {
+      grid-column: 6 span;
+      font-size: 1.125rem;
+      max-width: 447px;
     }
 
-    .advantage-machines__description {
-        font-size: 18px;
-        font-family: "Pangram-ExtraLight";
-
-        & p:first-child{
-            margin-bottom: 30px;
-        }
+    &__title {
+      font-family: "Pangram-Regular";
+      font-size: 2.25rem;
+      margin-bottom: 30px;
     }
-}
 
-.advantage-machines__image-item {
-    max-width: 100%;
-    object-fit: contain;
-}
+    &__image {
+      grid-column: 6 span;
+      margin-top: -10px;
+      max-width: 100%;
+      object-fit: contain;
+    }
 
-.advantage-machines__first-block-text {
-    margin-top: 250px;
+    &--indent {
+      margin-bottom: 30px;
+    }
+
+    &--selection {
+      font-family: "Pangram-Light";
+    }
+  }
 }
