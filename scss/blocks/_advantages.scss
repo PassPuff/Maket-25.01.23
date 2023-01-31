@@ -16,13 +16,16 @@
   &__list {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 500px;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
   }
 
   &__title {
     max-width: 760px;
     font-size: 3rem;
     line-height: 4.05rem;
-
 
 
     &--yellow {
@@ -38,6 +41,11 @@
     grid-auto-rows: auto;
     grid-gap: 30px;
     align-items: center;
+
+    width: 100%;
+    height: 100%;
+    // scroll-snap-align: start;
+    scroll-snap-align: center;
 
     &__text {
       grid-column: 6 span;
